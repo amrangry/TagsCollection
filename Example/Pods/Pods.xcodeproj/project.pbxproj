@@ -902,7 +902,6 @@
 		558C9B05C9BE15B971C221648CD924E6 /* TagsCollection */ = {
 			isa = PBXGroup;
 			children = (
-				0E7AE3BBE122DD6F4013F329AED0341D /* ReplaceMe.swift */,
 				C54158512A1582A400217A09 /* Source */,
 				0707AB1C33E654D8819B2960E6EE9A8C /* Pod */,
 				33138E86CD6A1ED7D7876094AD9D1E61 /* Support Files */,
@@ -1455,7 +1454,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED1DA089B07C260B3B99CBC40E52B3BB /* ReplaceMe.swift in Sources */,
 				C541586E2A15832C00217A09 /* TagsCollectionFlowLayout.swift in Sources */,
 				C54158652A15832C00217A09 /* TagsCollectionUILayoutAttributes.swift in Sources */,
 				C541586B2A15832C00217A09 /* TagsCollectionBindableModel.swift in Sources */,
