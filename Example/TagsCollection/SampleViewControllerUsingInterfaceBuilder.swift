@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
-//  TagsCollection
+//  SampleViewControllerUsingInterfaceBuilder.swift
+//  TagsCollection_Example
 //
-//  Created by amrangry on 05/18/2023.
-//  Copyright (c) 2023 amrangry. All rights reserved.
+//  Created by Amr Elghadban on 19/05/2023.
+//  Copyright © 2023 amrangry. All rights reserved.
 //
 
 import UIKit
 import TagsCollection
 
-class ViewController: UIViewController {
+class SampleViewControllerUsingInterfaceBuilder: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var tagsContainer: UIView?
@@ -135,8 +135,8 @@ class ViewController: UIViewController {
     }
 }
 
-// MARK: - ARSelectionView Delegate
-extension ViewController: TagsCollectionDelegate {
+// MARK: - TagsCollection Delegate
+extension SampleViewControllerUsingInterfaceBuilder: TagsCollectionDelegate {
     
     func selectionMaxLimitReached(_ selectionView: TagsCollection) {
         
@@ -150,10 +150,4 @@ extension ViewController: TagsCollectionDelegate {
         
     }
     
-}
-
-// MARK: - Category
-struct Category {
-    let id: Int?
-    let name: String?
 }
