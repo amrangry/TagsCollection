@@ -125,7 +125,7 @@ public class TagsCollection: UIView {
         super.init(coder: coder)
         
         addViews()
-        fatalError("init?(coder: NSCoder) not implemented yet")
+      //  fatalError("init?(coder: NSCoder) not implemented yet")
     }
     
     fileprivate func addViews() {

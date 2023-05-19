@@ -12,8 +12,7 @@ import TagsCollection
 class SampleViewControllerUsingInterfaceBuilder: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var tagsContainer: UIView?
-    fileprivate var tagsCollection: TagsCollection?
+    @IBOutlet weak var tagsCollection: TagsCollection?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -29,27 +28,17 @@ class SampleViewControllerUsingInterfaceBuilder: UIViewController {
     
     // MARK: - Design Layout
     fileprivate func configClassification() {
-        tagsCollection = TagsCollection()//(frame: CGRect.zero)
         tagsCollection?.selectionOption = .tags
         tagsCollection?.delegate = self
         tagsCollection?.alignment = .right // .left
         tagsCollection?.backgroundColor = .clear
         //tagsCollection?.maxSelectCount = 5
-        tagsContainer?.addSubview(self.tagsCollection!)
-        
-        self.tagsCollection?.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tagsCollection!.topAnchor.constraint(equalTo: tagsContainer!.topAnchor),
-            tagsCollection!.bottomAnchor.constraint(equalTo: tagsContainer!.bottomAnchor),
-            tagsCollection!.leftAnchor.constraint(equalTo: tagsContainer!.leftAnchor),
-            tagsCollection!.rightAnchor.constraint(equalTo: tagsContainer!.rightAnchor)
-        ])
-        tagsContainer?.layoutIfNeeded()
         
         var appearanceAttribute = TagsCollectionCellUIDesignAttributes()
+        appearanceAttribute.titleColor = .black
         appearanceAttribute.cellBackgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
-        appearanceAttribute.selectedTitleColor = .green
-        appearanceAttribute.selectedCellBackgroundColor = UIColor(red: 237, green: 28, blue: 36, alpha: 0.1)
+        appearanceAttribute.selectedTitleColor = .white
+        appearanceAttribute.selectedCellBackgroundColor = .blue
         appearanceAttribute.selectedCellBorderBackgroundColor = .black
         //appearanceAttribute.selectedButtonColor = .white
         appearanceAttribute.isShowButton = false
@@ -122,8 +111,9 @@ class SampleViewControllerUsingInterfaceBuilder: UIViewController {
         }
         
         let width = UIScreen.main.bounds.size.width
-        //        let height = UIScreen.main.bounds.size.height
-        let chunkedItems = items.chunked(into: Int((self.tagsCollection?.frame.height)! / (self.tagsCollection?.cellDesignAttributes.rowHeight)!))
+        let collectionHeight = (self.tagsCollection?.frame.height) ?? 1 // UIScreen.main.bounds.size.height
+        let estimateCellHeight = (self.tagsCollection?.cellDesignAttributes.rowHeight) ?? 1
+        let chunkedItems = items.chunked(into: Int( collectionHeight / estimateCellHeight) )
         for item in chunkedItems {
             let maxHeight = (item.map { $0.width }.max() ?? width/2) + TagCollectionCell.cellExtraSpace
             item.forEach {$0.width = maxHeight }
