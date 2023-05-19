@@ -29,14 +29,14 @@ public class TagsCollectionBindableModel {
     var originModel: Any?
     var isSelected: Bool
     var selectionOption: TagSelectionOption = .tags
-    var width = CGFloat(0)
+    public var width = CGFloat(0)
     
-    convenience init(title: String, originModel: Any, isSelected: Bool = false) {
+    public convenience init(title: String, originModel: Any, isSelected: Bool = false) {
         self.init(title: title, isSelected: isSelected)
         self.originModel = originModel
     }
     
-    init(title: String, isSelected: Bool = false) {
+    public init(title: String, isSelected: Bool = false) {
         self.title = title
         self.isSelected = isSelected
         width = sizeForLabel(text: title, font: UIFont.systemFont(ofSize: 15) ).width

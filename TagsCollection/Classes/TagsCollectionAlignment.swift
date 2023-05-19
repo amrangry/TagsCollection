@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TagsCollectionAlignment {
+public enum TagsCollectionAlignment {
     case left
     case right
     case none
