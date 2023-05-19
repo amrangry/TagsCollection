@@ -64,8 +64,8 @@ In the Identity Inspector, set the layout object's custom class to TagsCollectio
 
 Step 1. In the Identity Inspector, set the layout object's custom class to `TagsCollection`.
 
-    ![](Screenshots/interfacebuilder.png)
-    
+ ![](Screenshots/interfacebuilder.png)
+ 
 Step 2. Import `TagsCollection` module to your `Swift` class
 ```swift
     import TagsCollection
