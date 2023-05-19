@@ -57,7 +57,6 @@ class SampleViewControllerUsingCoding: UIViewController {
         appearanceAttribute.rowHeight = 40
         appearanceAttribute.cornerRadius = 20
         
-        tagsCollection?.backgroundColor = .clear
         tagsCollection?.cellDesignAttributes = appearanceAttribute
         tagsCollection?.options = TagsCollectionUILayoutAttributes(sectionInset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), lineSpacing: 10, interItemSpacing: 10, scrollDirection: .vertical) //swiftlint:disable:this line_length
         
