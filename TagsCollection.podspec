@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TagsCollection'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'TagsCollection is a collection view which is render dynamic cell size (tags)'
 
 # This description is used to generate tags and improve search results.
@@ -33,8 +33,10 @@ Pod::Spec.new do |s|
   s.platforms = {
       "ios": "12.0"
   }
-  s.source_files = 'TagsCollection/Classes/**/*'
-  s.resources = 'TagsCollection/Assets/*'
+  
+  #s.source_files = 'TagsCollection/Classes/**/*'
+  s.source_files = 'TagsCollection/Classes/*'
+  # s.resources = 'TagsCollection/Assets/*'
   # s.resource_bundles = {
   #   'TagsCollection' => ['TagsCollection/Assets/*.png']
   # }
