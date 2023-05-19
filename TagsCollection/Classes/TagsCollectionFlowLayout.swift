@@ -22,7 +22,7 @@
 
 import UIKit
 
-class TagsCollectionFlowLayout: UICollectionViewFlowLayout {
+public class TagsCollectionFlowLayout: UICollectionViewFlowLayout {
     
     typealias Alignment = (lastRow: Int, lastMargin: CGFloat)
     
