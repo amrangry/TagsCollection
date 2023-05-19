@@ -22,7 +22,9 @@
 
 import UIKit
 
-class TagCollectionCell: UICollectionViewCell {
+public class TagCollectionCell: UICollectionViewCell {
+    
+    public static let cellExtraSpace: CGFloat = 55
     
     // MARK: - IBOutLet
     fileprivate let stackView: UIStackView = {
@@ -54,7 +56,7 @@ class TagCollectionCell: UICollectionViewCell {
     }()
     
     // MARK: - Variables UI
-    var alignment: TagsCollectionAlignment = TagsCollectionAlignment.left {
+    public var alignment: TagsCollectionAlignment = TagsCollectionAlignment.left {
         didSet {
             selectButton.removeFromSuperview()
             titleLabel.removeFromSuperview()
@@ -79,7 +81,7 @@ class TagCollectionCell: UICollectionViewCell {
     weak var delegate: TagCollectionCellDelegate?
     
     // MARK: - Init Variables
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         addViews()
