@@ -22,7 +22,7 @@
 
 import UIKit
 
-protocol TagsCollectionDelegate: AnyObject {
+public protocol TagsCollectionDelegate: AnyObject {
     
     func selectionMaxLimitReached( _ selectionView: TagsCollection)
     func didSelectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection)
@@ -32,15 +32,15 @@ protocol TagsCollectionDelegate: AnyObject {
     //    }
 }
 
-public final class TagsCollection: UIView {
+public class TagsCollection: UIView {
 
     // MARK: - Variables
-    weak var delegate: TagsCollectionDelegate?
+    public weak var delegate: TagsCollectionDelegate?
     private var resource: (cell: TagCollectionCell?, identifier: String)?
-    var cellDesignAttributes = TagsCollectionCellUIDesignAttributes()
-    lazy var tagLayout = TagsCollectionFlowLayout()
-    var maxSelectCount: Int?
-    var options: TagsCollectionUILayoutAttributes = TagsCollectionUILayoutAttributes() {
+    public var cellDesignAttributes = TagsCollectionCellUIDesignAttributes()
+    public lazy var tagLayout = TagsCollectionFlowLayout()
+    public var maxSelectCount: Int?
+    public var options: TagsCollectionUILayoutAttributes = TagsCollectionUILayoutAttributes() {
         didSet {
             tagLayout.sectionInset = options.sectionInset
             tagLayout.minimumInteritemSpacing = options.interItemSpacing
@@ -56,7 +56,7 @@ public final class TagsCollection: UIView {
         }
     }
     
-    var alignment: TagsCollectionAlignment? = .left {
+    public var alignment: TagsCollectionAlignment? = .left {
         didSet {
             if selectionOption == .tags && options.scrollDirection != .horizontal {
                 tagLayout.align = alignment == .right ? .right: .left
@@ -67,7 +67,7 @@ public final class TagsCollection: UIView {
         }
     }
     
-    var selectionOption: TagSelectionOption? {
+    public var selectionOption: TagSelectionOption? {
         didSet {
             if selectionOption == .tags && options.scrollDirection != .horizontal {
                 tagLayout.align = alignment == .right ? .right: .left
@@ -93,11 +93,12 @@ public final class TagsCollection: UIView {
         view.bounces = false
         view.translatesAutoresizingMaskIntoConstraints = false
         let reuseIdentifier = String(describing: TagCollectionCell.self)
-        view.register(UINib.init(nibName: reuseIdentifier, bundle: Bundle.main), forCellWithReuseIdentifier: reuseIdentifier)
+        //view.register(UINib.init(nibName: reuseIdentifier, bundle: Bundle.main), forCellWithReuseIdentifier: reuseIdentifier)
+        view.register(TagCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         return view
     }()
     
-    var items: [TagsCollectionBindableModel] = [] {
+    public var items: [TagsCollectionBindableModel] = [] {
         didSet {
             items.forEach { $0.selectionOption = (selectionOption ?? .tags) }
             collectionView.reloadData()
