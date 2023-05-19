@@ -104,7 +104,7 @@ extension ViewController: TagsCollectionDelegate {
     func didUnselectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection) {
         
     }
-
+    
 }
 
 // MARK: - Category
