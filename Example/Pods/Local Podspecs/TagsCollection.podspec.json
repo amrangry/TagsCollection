@@ -17,7 +17,7 @@
   },
   "social_media_url": "https://twitter.com/amr_elghadban",
   "platforms": {
-    "ios": "13.0"
+    "ios": "12.0"
   },
   "swift_versions": "5.0",
   "source_files": "TagsCollection/Classes/**/*",
