@@ -121,8 +121,9 @@ class SampleViewControllerUsingCoding: UIViewController {
         }
         
         let width = UIScreen.main.bounds.size.width
-        //        let height = UIScreen.main.bounds.size.height
-        let chunkedItems = items.chunked(into: Int((self.tagsCollection?.frame.height)! / (self.tagsCollection?.cellDesignAttributes.rowHeight)!))
+        let collectionHeight = (self.tagsCollection?.frame.height) ?? 1 // UIScreen.main.bounds.size.height
+        let estimateCellHeight = (self.tagsCollection?.cellDesignAttributes.rowHeight) ?? 1
+        let chunkedItems = items.chunked(into: Int( collectionHeight / estimateCellHeight) )
         for item in chunkedItems {
             let maxHeight = (item.map { $0.width }.max() ?? width/2) + TagCollectionCell.cellExtraSpace
             item.forEach {$0.width = maxHeight }
