@@ -34,7 +34,7 @@ public struct TagsCollectionUILayoutAttributes {
     /// variable
     public let scrollDirection: UICollectionView.ScrollDirection
     
-    /// variable
+    /// Initializer
     public init(sectionInset: UIEdgeInsets = .zero, lineSpacing: CGFloat = CGFloat(0), interItemSpacing: CGFloat = CGFloat(0), scrollDirection: UICollectionView.ScrollDirection = .vertical) {
         self.sectionInset = sectionInset
         self.lineSpacing = lineSpacing
