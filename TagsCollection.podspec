@@ -27,10 +27,12 @@ Pod::Spec.new do |s|
   s.author           = { 'amrangry' => 'amr.elghadban@gmail.com' }
   s.source           = { :git => 'https://github.com/amrangry/TagsCollection.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/amr_elghadban'
-
+  #s.documentation_url = 'https://clockwise.github.io'
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
-  
+  s.platforms = {
+      "ios": "12.0"
+  }
   s.source_files = 'TagsCollection/Classes/**/*'
   s.resources = 'TagsCollection/Assets/*'
   # s.resource_bundles = {

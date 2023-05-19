@@ -71,7 +71,7 @@ class TagCollectionCell: UICollectionViewCell {
     }
     
     var fittingSize: CGSize {
-        systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        return self.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
     }
     
     // MARK: - Variables

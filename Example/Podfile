@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '13.0'
 
 target 'TagsCollection_Example' do
   pod 'TagsCollection', :path => '../'
@@ -8,9 +8,9 @@ target 'TagsCollection_Example' do
   target 'TagsCollection_Tests' do
     inherit! :search_paths
 # dependency
-    pod 'Quick', '~> 2.2.0'
-    pod 'Nimble', '~> 10.0.0'
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-    pod 'Nimble-Snapshots' , '~> 9.4.0'
+#    pod 'Quick', '~> 2.2.0'
+#    pod 'Nimble', '~> 10.0.0'
+#    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+#    pod 'Nimble-Snapshots' , '~> 9.4.0'
   end
 end
