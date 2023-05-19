@@ -25,9 +25,9 @@ import UIKit
 protocol TagsCollectionDelegate: AnyObject {
     
     func selectionMaxLimitReached( _ selectionView: TagsCollection)
-    func didSelectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, selectionView: TagsCollection?)
-    func didUnselectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, selectionView: TagsCollection?)
-    //    func didSelectItemAt(didSelectItemAt indexPath: IndexPath, selectionView: ARSelectionView?) {
+    func didSelectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection)
+    func didUnselectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection)
+    //    func didSelectItemAt(didSelectItemAt indexPath: IndexPath, collection: TagsCollection?) {
     //        self.updateSelection(self.items[indexPath.row])
     //    }
 }
@@ -194,9 +194,9 @@ extension TagsCollection: UICollectionViewDelegate, UICollectionViewDataSource {
         let selectItem = items[indexPath.row]
         let status = selectItem.isSelected
         if status == true {
-            delegate?.didUnselectItemAt(didSelectItemAt: indexPath, object: selectItem, selectionView: self)
+            delegate?.didUnselectItemAt(didSelectItemAt: indexPath, object: selectItem, collection: self)
         } else {
-            delegate?.didSelectItemAt(didSelectItemAt: indexPath, object: selectItem, selectionView: self)
+            delegate?.didSelectItemAt(didSelectItemAt: indexPath, object: selectItem, collection: self)
         }
         updateSelection(selectItem)
     }
