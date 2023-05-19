@@ -112,11 +112,11 @@ class TagCollectionCell: UICollectionViewCell {
     
     // MARK: - UIButton Action
     @objc func selectButtonAction(_ button: UIButton) {
-        delegate?.ARSelectionAction(bindableObject!)
+        delegate?.selectionAction(bindableObject!)
     }
     
     // MARK: - Config Cell
-    func configCell(_ item: TagsCollectionBindableModel?, designAttributes: TagsCollectionCellUIDesignAttributes? = TagsCollectionCellUIDesignAttributes(), alignment: TagsCollectionAlignment = TagsCollectionAlignment.left) {
+    public func configCell(_ item: TagsCollectionBindableModel?, designAttributes: TagsCollectionCellUIDesignAttributes? = TagsCollectionCellUIDesignAttributes(), alignment: TagsCollectionAlignment = TagsCollectionAlignment.left) {
         if let object = item, let options = designAttributes {
             bindableObject = item
             
