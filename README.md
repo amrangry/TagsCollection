@@ -24,8 +24,6 @@ TagsCollection
 ![GitHub forks](https://img.shields.io/github/forks/amrangry/TagsCollection?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/amrangry/TagsCollection?style=social)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
