@@ -230,7 +230,7 @@ extension TagsCollection: UICollectionViewDelegateFlowLayout {
 // MARK: - TagCollectionCellDelegate
 extension TagsCollection: TagCollectionCellDelegate {
     
-    func ARSelectionAction(_ selectItem: TagsCollectionBindableModel) {
+    public func selectionAction(_ selectItem: TagsCollectionBindableModel) {
         updateSelection(selectItem)
     }
     

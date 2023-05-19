@@ -22,6 +22,6 @@
 
 import Foundation
 
-protocol TagCollectionCellDelegate: AnyObject {
-    func ARSelectionAction(_ selectItem: TagsCollectionBindableModel)
+public protocol TagCollectionCellDelegate: AnyObject {
+    func selectionAction(_ selectItem: TagsCollectionBindableModel)
 }
