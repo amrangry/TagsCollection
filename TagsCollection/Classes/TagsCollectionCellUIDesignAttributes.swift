@@ -25,6 +25,9 @@ import Foundation
 /// TagsCollectionCellUIDesignAttributes for cell
 public struct TagsCollectionCellUIDesignAttributes {
     
+    /// Initializer
+    public init() {}
+    
     /// rowHeight
     public var rowHeight: CGFloat = 35
     
