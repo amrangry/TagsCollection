@@ -114,7 +114,7 @@ class SampleViewControllerUsingCoding: UIViewController {
                           Category(id: 47, name: "iOS"),
                           Category(id: 48, name: "Android"),
                           Category(id: 49, name: "Graphic design"),
-                          Category(id: 50, name: "Front-end development")]
+                          Category(id: 50, name: "Front-end development")].shuffled()
         for category in categories {
             guard let name = category.name else { continue }
             items.append(TagsCollectionBindableModel(title: name, originModel: category))
