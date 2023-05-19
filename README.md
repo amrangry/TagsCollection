@@ -62,20 +62,20 @@ Add content of folder Source/* to your project
 Setup in Interface Builder
 In the Identity Inspector, set the layout object's custom class to TagsCollection.
 
-1. In the Identity Inspector, set the layout object's custom class to `TagsCollection`.
+Step 1. In the Identity Inspector, set the layout object's custom class to `TagsCollection`.
 
     ![](Screenshots/interfacebuilder.png)
     
-2. Import `TagsCollection` module to your `Swift` class
+Step 2. Import `TagsCollection` module to your `Swift` class
 ```swift
     import TagsCollection
 ```
-3. Connect View with IBOutlet to your `Swift` class
+Step 3. Connect View with IBOutlet to your `Swift` class
 
     ```Swift
     @IBOutlet weak var tagsCollection: TagsCollection?
     ```
-4. Enjoy :)
+Step 4. Enjoy :)
 
 ## Versioning
 
