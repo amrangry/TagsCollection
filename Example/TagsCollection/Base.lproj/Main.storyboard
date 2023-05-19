@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U72-uw-5Bz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MDF-Go-LEe">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sample View Controller Using Coding-->
+        <!--Code-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="SampleViewControllerUsingCoding" customModule="TagsCollection_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,14 +20,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TagsCollection" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBg-1n-ogf">
-                                <rect key="frame" x="102" y="44" width="171" height="25.5"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
-                                <color key="textColor" systemColor="systemBlueColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBg-1n-ogf">
+                                <rect key="frame" x="82.5" y="44" width="210.5" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TagsCollection: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemBlueColor"/>
+                                            <font key="NSFont" size="18" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Code">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemBlueColor"/>
+                                            <font key="NSFont" size="14" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Tq-7t-fdl" userLabel="TagsContainer">
-                                <rect key="frame" x="24" y="93.5" width="327" height="549.5"/>
+                                <rect key="frame" x="24" y="91" width="327" height="503"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -35,21 +49,22 @@
                         <constraints>
                             <constraint firstItem="oBg-1n-ogf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8bn-TR-xQ6"/>
                             <constraint firstItem="oBg-1n-ogf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="24" id="bMw-H4-U7x"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8Tq-7t-fdl" secondAttribute="bottom" constant="24" id="i4d-zj-PwR"/>
                             <constraint firstAttribute="trailing" secondItem="8Tq-7t-fdl" secondAttribute="trailing" constant="24" id="rfE-sf-fbW"/>
                             <constraint firstItem="8Tq-7t-fdl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="24" id="s8y-xy-tCl"/>
                             <constraint firstItem="8Tq-7t-fdl" firstAttribute="top" secondItem="oBg-1n-ogf" secondAttribute="bottom" constant="24" id="xjM-W2-7wV"/>
-                            <constraint firstAttribute="bottom" secondItem="8Tq-7t-fdl" secondAttribute="bottom" constant="24" id="xr9-Nv-bAa"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Code" id="cRV-C5-IN5"/>
                     <connections>
                         <outlet property="tagsContainer" destination="8Tq-7t-fdl" id="uXD-1c-co5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="1"/>
+            <point key="canvasLocation" x="753" y="789"/>
         </scene>
-        <!--Sample View Controller Using Interface Builder-->
+        <!--InterfaceBuilder-->
         <scene sceneID="x8E-QJ-fJQ">
             <objects>
                 <viewController id="U72-uw-5Bz" customClass="SampleViewControllerUsingInterfaceBuilder" customModule="TagsCollection_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,34 +76,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TagsCollection" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTg-Uu-Zjf">
-                                <rect key="frame" x="102" y="45" width="171" height="25.5"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTg-Uu-Zjf">
+                                <rect key="frame" x="37.5" y="45" width="300.5" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TagsCollection: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemRedColor"/>
+                                            <font key="NSFont" size="18" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="14" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="InterfaceBuilder">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemRedColor"/>
+                                            <font key="NSFont" size="14" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="14" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZH-Nf-Hn0" userLabel="TagsContainer" customClass="TagsCollection" customModule="TagsCollection">
-                                <rect key="frame" x="24" y="94.5" width="327" height="572.5"/>
+                                <rect key="frame" x="24" y="92" width="327" height="502"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="R7N-aZ-YLF" firstAttribute="top" secondItem="ZZH-Nf-Hn0" secondAttribute="bottom" constant="24" id="EAh-j4-E9L"/>
                             <constraint firstAttribute="trailing" secondItem="ZZH-Nf-Hn0" secondAttribute="trailing" constant="24" id="GR7-aT-y24"/>
                             <constraint firstItem="ZZH-Nf-Hn0" firstAttribute="leading" secondItem="NGt-Kt-9CD" secondAttribute="leading" constant="24" id="LiI-gR-smJ"/>
                             <constraint firstItem="CTg-Uu-Zjf" firstAttribute="centerX" secondItem="NGt-Kt-9CD" secondAttribute="centerX" id="eyg-fl-SMc"/>
-                            <constraint firstAttribute="bottom" secondItem="ZZH-Nf-Hn0" secondAttribute="bottom" id="hjH-Zl-96P"/>
                             <constraint firstItem="CTg-Uu-Zjf" firstAttribute="top" secondItem="bWY-Cf-1aN" secondAttribute="bottom" constant="25" id="icj-Kw-WcC"/>
                             <constraint firstItem="ZZH-Nf-Hn0" firstAttribute="top" secondItem="CTg-Uu-Zjf" secondAttribute="bottom" constant="24" id="qeT-uY-zn4"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="InterfaceBuilder" id="ssc-Zs-mZz"/>
                     <connections>
                         <outlet property="tagsCollection" destination="ZZH-Nf-Hn0" id="2Db-Cl-oOW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEJ-mJ-lhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873" y="0.0"/>
+            <point key="canvasLocation" x="-470" y="788"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="P8l-vl-coR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MDF-Go-LEe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TXn-gz-xV2">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="U72-uw-5Bz" kind="relationship" relationship="viewControllers" id="TA1-ds-Wlk"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="6TN-Ol-iKZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dW-SN-KJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="0.44977511244377816"/>
         </scene>
     </scenes>
     <resources>
