@@ -24,10 +24,16 @@ TagsCollection
 ![GitHub forks](https://img.shields.io/github/forks/amrangry/TagsCollection?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/amrangry/TagsCollection?style=social)
 
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Screenshots
+
+<!--<img src="https://github.com/amrangry/TagsCollection/blob/master/Screenshots/movie.gif" width="250" height="500">-->
+ <img src="https://github.com/KarimEbrahemAbdelaziz/SwiftyMenu/blob/master/Screenshots/Simulator_ScreenShot_iPhone14Pro.jpg" width="250" height="500">
+ 
 ## Requirements
 
 ## Installation
