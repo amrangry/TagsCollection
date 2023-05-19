@@ -58,11 +58,24 @@ To install manually the TagsCollection classes in your app, just drag the Source
 Add content of folder Source/* to your project
 
 ## How it works "Usage"
-1. Import `TagsCollection` module to your `Swift` class
+
+Setup in Interface Builder
+In the Identity Inspector, set the layout object's custom class to TagsCollection.
+
+1. In the Identity Inspector, set the layout object's custom class to `TagsCollection`.
+
+    ![](Screenshots/interfacebuilder.png)
+    
+2. Import `TagsCollection` module to your `Swift` class
 ```swift
     import TagsCollection
 ```
-2. Enjoy
+3. Connect View with IBOutlet to your `Swift` class
+
+    ```Swift
+    @IBOutlet weak var tagsCollection: TagsCollection?
+    ```
+4. Enjoy :)
 
 ## Versioning
 
