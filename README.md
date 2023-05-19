@@ -1,6 +1,10 @@
 # TagsCollection
 TagsCollection
 
+<p align="center">
+  <img src ="https://github.com/amrangry/TagsCollection/blob/main/logo.png?raw=true"/>
+</p>
+
 [![CI Status](https://img.shields.io/travis/amrangry/TagsCollection.svg?style=flat)](https://travis-ci.org/amrangry/TagsCollection)
 [![Version](https://img.shields.io/cocoapods/v/TagsCollection.svg?style=flat)](https://cocoapods.org/pods/TagsCollection)
 [![License](https://img.shields.io/cocoapods/l/TagsCollection.svg?style=flat)](https://cocoapods.org/pods/TagsCollection)
@@ -12,7 +16,7 @@ TagsCollection
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/amrangry/TagsCollection?sort=semver)
 
 ![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)
-[![Platform](https://img.shields.io/cocoapods/p/TagsCollection.svg?style=flat)](https://cocoapods.org/pods/TagsCollection)
+
 ![](https://img.shields.io/badge/Platform-iOS-orange) <img src="https://img.shields.io/badge/minimum%20iOS%20version-10-red"> 
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/amrangry/TagsCollection)
@@ -21,11 +25,6 @@ TagsCollection
 ![GitHub stars](https://img.shields.io/github/stars/amrangry/TagsCollection?style=social)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
-
-<p align="center">
-  <img src ="https://github.com/amrangry/TagsCollection/blob/main/logo.png?raw=true"/>
-</p>
-
 
 ## Example
 
