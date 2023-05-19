@@ -10,7 +10,7 @@ import UIKit
 import TagsCollection
 
 class ViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tagsContainer: UIView?
     fileprivate var tagsCollection: TagsCollection?
@@ -21,12 +21,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         configClassification()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Design Layout
     fileprivate func configClassification() {
         tagsCollection = TagsCollection()//(frame: CGRect.zero)
