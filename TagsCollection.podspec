@@ -19,7 +19,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TagsCollection'
-  s.version          = '1.2.0'
+  s.version          = '2.0.0'
   s.summary          = 'TagsCollection is a collection view which is render dynamic cell size (tags)'
   
   # This description is used to generate tags and improve search results.
