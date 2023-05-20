@@ -52,4 +52,10 @@ public class TagsCollectionBindableModel {
         return label.frame.size
     }
     
+    func getWidth(text: String , font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedString.Key.font: font]
+        let size = (text as NSString).size(withAttributes: fontAttributes)
+        return size.width
+    }
+    
 }
