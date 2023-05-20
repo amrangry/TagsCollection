@@ -1,5 +1,5 @@
 PODS:
-  - TagsCollection (1.1.0)
+  - TagsCollection (1.1.1)
 
 DEPENDENCIES:
   - TagsCollection (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TagsCollection: 58433ca9fe2fe3c673068a1f6c4c1df20ba3ff5e
+  TagsCollection: 05bde7293fb24e4fd3ecba80d6e95d9ee8723766
 
 PODFILE CHECKSUM: 994e2d41e19875e8934593a5a8793235ef293e42
 
