@@ -26,7 +26,7 @@ import UIKit
 public class TagsCollectionBindableModel {
     
     var title: String
-    var originModel: Any?
+    public var originModel: Any?
     var isSelected: Bool
     var selectionOption: TagSelectionOption = .tags
     public var width = CGFloat(0)
