@@ -19,7 +19,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TagsCollection'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'TagsCollection is a collection view which is render dynamic cell size (tags)'
   
   # This description is used to generate tags and improve search results.
@@ -102,10 +102,13 @@ Pod::Spec.new do |s|
   #
   
   # s.exclude_files = "Classes/Exclude"
-  # s.source_files  = 'TagsCollection/*.{h,m}'
-  #s.source_files = 'TagsCollection/Classes/**/*'
-  s.source_files = 'TagsCollection/Classes/*'
   
+  # s.source_files = 'TagsCollection/*.{h,m}'
+  # s.source_files = 'TagsCollection/Classes/*'
+  # s.source_files = 'ScreenCaptureDetector/Classes/**/*'
+  # s.source_files = 'Source/**/*.swift'
+  s.source_files = 'Source/**/*'
+
   # s.public_header_files = "Classes/**/*.h"
   # s.public_header_files = 'Pod/Classes/**/*.h'
   
