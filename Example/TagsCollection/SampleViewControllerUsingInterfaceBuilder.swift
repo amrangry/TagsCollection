@@ -29,7 +29,21 @@ class SampleViewControllerUsingInterfaceBuilder: UIViewController {
     // MARK: - Design Layout
     fileprivate func configClassification() {
         tagsCollection?.selectionOption = .tags
+        
         tagsCollection?.delegate = self
+        
+        tagsCollection?.didReachedSelectionLimit = { collection in
+            //ReachedSelectionLimit
+        }
+        
+        tagsCollection?.didSelectItem = { index, object, collection in
+            //didSelectItem
+        }
+        
+        tagsCollection?.didUnselectItem = { index, object, collection in
+            //didUnselectItem
+        }
+        
         tagsCollection?.alignment = .right // .left
         tagsCollection?.backgroundColor = .clear
         //tagsCollection?.maxSelectCount = 5
@@ -126,16 +140,16 @@ class SampleViewControllerUsingInterfaceBuilder: UIViewController {
 
 // MARK: - TagsCollection Delegate
 extension SampleViewControllerUsingInterfaceBuilder: TagsCollectionDelegate {
-    
-    func selectionMaxLimitReached(_ selectionView: TagsCollection) {
+   
+    func didReachedSelectionLimit(_ selectionView: TagsCollection) {
         
     }
     
-    func didSelectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection) {
+    func didSelectItem(at indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection) {
         
     }
     
-    func didUnselectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection) {
+    func didUnselectItem(at indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection) {
         
     }
     
