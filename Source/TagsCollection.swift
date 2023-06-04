@@ -36,6 +36,11 @@ public class TagsCollection: UIView {
 
     // MARK: - Variables
     public weak var delegate: TagsCollectionDelegate?
+
+    public var didReachedSelectionLimit: (( _ selectionView: TagsCollection) -> Void)?
+    public var didSelectItem: ((_ at: IndexPath, _ object: TagsCollectionBindableModel?, _ collection: TagsCollection) -> Void)?
+    public var didUnselectItem: ((_ at: IndexPath, _ object: TagsCollectionBindableModel?, _ collection: TagsCollection) -> Void)?
+    
     private var resource: (cell: TagCollectionCell?, identifier: String)?
     public var cellDesignAttributes = TagsCollectionCellUIDesignAttributes()
     public lazy var tagLayout = TagsCollectionFlowLayout()
@@ -161,6 +166,7 @@ public class TagsCollection: UIView {
                     collectionView.reloadData()
                 } else {
                     delegate?.didReachedSelectionLimit(self)
+                    didReachedSelectionLimit?(self)
                 }
             } else {
                 selectItem.isSelected.toggle()
@@ -196,8 +202,10 @@ extension TagsCollection: UICollectionViewDelegate, UICollectionViewDataSource {
         let status = selectItem.isSelected
         if status == true {
             delegate?.didUnselectItem(at: indexPath, object: selectItem, collection: self)
+            didUnselectItem?(indexPath, selectItem, self)
         } else {
             delegate?.didSelectItem(at: indexPath, object: selectItem, collection: self)
+            didSelectItem?(indexPath, selectItem, self)
         }
         updateSelection(selectItem)
     }
