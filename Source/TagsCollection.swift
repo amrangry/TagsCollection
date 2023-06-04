@@ -24,10 +24,10 @@ import UIKit
 
 public protocol TagsCollectionDelegate: AnyObject {
     
-    func selectionMaxLimitReached( _ selectionView: TagsCollection)
-    func didSelectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection)
-    func didUnselectItemAt(didSelectItemAt indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection)
-    //    func didSelectItemAt(didSelectItemAt indexPath: IndexPath, collection: TagsCollection?) {
+    func didReachedSelectionLimit( _ selectionView: TagsCollection)
+    func didSelectItem(at indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection)
+    func didUnselectItem(at indexPath: IndexPath, object: TagsCollectionBindableModel?, collection: TagsCollection)
+    //    func didSelectItem(at indexPath: IndexPath, collection: TagsCollection?) {
     //        self.updateSelection(self.items[indexPath.row])
     //    }
 }
@@ -160,7 +160,7 @@ public class TagsCollection: UIView {
                     selectItem.isSelected.toggle()
                     collectionView.reloadData()
                 } else {
-                    delegate?.selectionMaxLimitReached(self)
+                    delegate?.didReachedSelectionLimit(self)
                 }
             } else {
                 selectItem.isSelected.toggle()
@@ -195,9 +195,9 @@ extension TagsCollection: UICollectionViewDelegate, UICollectionViewDataSource {
         let selectItem = items[indexPath.row]
         let status = selectItem.isSelected
         if status == true {
-            delegate?.didUnselectItemAt(didSelectItemAt: indexPath, object: selectItem, collection: self)
+            delegate?.didUnselectItem(at: indexPath, object: selectItem, collection: self)
         } else {
-            delegate?.didSelectItemAt(didSelectItemAt: indexPath, object: selectItem, collection: self)
+            delegate?.didSelectItem(at: indexPath, object: selectItem, collection: self)
         }
         updateSelection(selectItem)
     }
